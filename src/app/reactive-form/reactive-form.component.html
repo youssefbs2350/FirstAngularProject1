@@ -1,0 +1,56 @@
+
+
+<label> login</label>
+<input type="text" [formControl]="login">
+
+<label> Password</label>
+<input type="password" [formControl]="pwd">
+
+<input class="btn btn-info" type="submit" value="save" (click)="showLogin()" [disabled]="login.invalid || pwd.invalid">
+
+
+<h2>FormsGroup</h2>
+
+<form [formGroup]="registreForm">
+
+
+    <div class="form-group">
+        <label> Cin</label>
+        <input type="text" formControlName="cin" placeholder="ta9etet3arif" class="form-control">
+    </div>
+    <div *ngIf="registreForm.controls['cin'].invalid && registreForm.controls[ 'cin'].touched">
+        <div class="alert  alert-danger" *ngIf="registreForm.get('cin')?.hasError('pattern')">
+            pattern
+        </div>
+    </div>
+    <div class="form-group">
+        <label> firstName</label>
+        <input type="text" formControlName="firstname" placeholder="firstname" class="form-control">
+    </div>
+    <div *ngIf="registreForm.controls['firstname'].invalid && registreForm.controls[ 'firstname'].touched">
+        <div class="alert  alert-danger" *ngIf="registreForm.get('firstname')?.hasError('required')">
+            firstName is a required field
+        </div>
+        <div class="alert alert-danger" *ngIf="registreForm.get('firstname')?.hasError('minlength')">
+            the firstName minlenght is 3
+        </div>
+    </div>
+    <div class=" form-group ">
+        <label> lastName</label>
+        <input type="text " formControlName="lastname" class="form-control ">
+    </div>
+    <div class="alert alert-danger " *ngIf="registreForm.controls[ 'lastname'].invalid && registreForm.controls[ 'lastname'].touched ">
+        lastName is a required field
+    </div>
+
+    <div class="form-group ">
+        <label> adress</label>
+        <input type="text " formControlName="adress" class="form-control ">
+    </div>
+    <div class="alert alert-danger " *ngIf="registreForm.controls[ 'adress'].invalid && registreForm.controls[ 'adress'].touched ">
+        adress is a required field
+    </div>
+
+    <input class=" btn btn-info " type="submit " value="save " (click)="showLogin() " [disabled]="registreForm.invalid ">
+    <input class="btn btn-danger " type="submit " value="cancel " (click)="reset() ">
+</form>

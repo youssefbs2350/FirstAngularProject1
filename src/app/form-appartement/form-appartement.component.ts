@@ -15,7 +15,7 @@ export class FormAppartementComponent implements OnInit {
     this.apartForm = this.fb.group({
       apartmentNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       floorNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      description: ['', [Validators.required, Validators.minLength(10)]],
+      description: [''],
       surface: ['', Validators.required],
       terrace: [false],
       surfaceTerrace: [{ value: '', disabled: true }, Validators.required],

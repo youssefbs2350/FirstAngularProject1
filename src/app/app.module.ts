@@ -14,7 +14,7 @@ import { DetailsApartmentComponent } from './details-apartment/details-apartment
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DetailProductComponent } from './details-product/details-product.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { navbar } from './navbar/navbar.component';
 import { FormAppartementComponent } from './form-appartement/form-appartement.component';
 
 
@@ -30,7 +30,7 @@ import { FormAppartementComponent } from './form-appartement/form-appartement.co
     FormResidenceComponent,
     ReactiveFormComponent,
     DetailProductComponent,
-    NavbarComponent,
+    navbar,
     FormAppartementComponent
   ],
   imports: [

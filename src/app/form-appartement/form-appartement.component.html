@@ -24,9 +24,6 @@
     <div class="form-group">
       <label for="description">Description:</label>
       <textarea class="form-control" formControlName="description"></textarea>
-      <div *ngIf="apartForm.get('description')?.hasError('required')" class="text-danger">
-        Description est obligatoire.
-      </div>
       <div *ngIf="apartForm.get('description')?.hasError('minlength')" class="text-danger">
         Description doit contenir au moins 10 caractères.
       </div>
@@ -59,7 +56,7 @@
       <label for="category">Category:</label>
       <select class="form-control" formControlName="category">
         <option value="" disabled selected>Choisir une catégorie</option>
-        <option value="s+a">S+A</option>
+        <option value="s+a">S+1</option>
         <option value="s+2">S+2</option>
         <option value="s+3">S+3</option>
       </select>

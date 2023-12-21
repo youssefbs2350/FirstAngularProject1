@@ -15,6 +15,7 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DetailProductComponent } from './details-product/details-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormAppartementComponent } from './form-appartement/form-appartement.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormResidenceComponent,
     ReactiveFormComponent,
     DetailProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    FormAppartementComponent
   ],
   imports: [
     BrowserModule,

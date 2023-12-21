@@ -7,9 +7,11 @@ import { ResidenceComponent } from './residence/residence.component';
 import { TestComponent } from 'src/test/test.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormAppartementComponent } from './form-appartement/form-appartement.component';
 
 const routes: Routes = [
   {path:'home', component:TestComponent},
+  {path:'Formappart', component:FormAppartementComponent},
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'product',component:ProductComponent},
   {path:'product/:id',component:DetailProductComponent},

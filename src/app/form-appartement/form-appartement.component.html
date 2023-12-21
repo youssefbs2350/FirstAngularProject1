@@ -1,0 +1,81 @@
+<form [formGroup]="apartForm" class="container mt-4">
+    <div class="form-group">
+      <label for="apartmentNumber">Apartment Number:</label>
+      <input type="text" class="form-control" formControlName="apartmentNumber">
+      <div *ngIf="apartForm.get('apartmentNumber')?.hasError('required')" class="text-danger">
+        Apartment Number est obligatoire.
+      </div>
+      <div *ngIf="apartForm.get('apartmentNumber')?.hasError('pattern')" class="text-danger">
+        Apartment Number doit contenir uniquement des chiffres.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="floorNumber">Floor Number:</label>
+      <input type="text" class="form-control" formControlName="floorNumber">
+      <div *ngIf="apartForm.get('floorNumber')?.hasError('required')" class="text-danger">
+        Floor Number est obligatoire.
+      </div>
+      <div *ngIf="apartForm.get('floorNumber')?.hasError('pattern')" class="text-danger">
+        Floor Number doit contenir uniquement des chiffres.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" formControlName="description"></textarea>
+      <div *ngIf="apartForm.get('description')?.hasError('required')" class="text-danger">
+        Description est obligatoire.
+      </div>
+      <div *ngIf="apartForm.get('description')?.hasError('minlength')" class="text-danger">
+        Description doit contenir au moins 10 caractères.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="surface">Surface:</label>
+      <input type="text" class="form-control" formControlName="surface">
+      <div *ngIf="apartForm.get('surface')?.hasError('required')" class="text-danger">
+        Surface est obligatoire.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" formControlName="terrace">
+        <label class="form-check-label">Terrace</label>
+      </div>
+    </div>
+  
+    <div *ngIf="apartForm.get('surfaceTerrace')?.hasError('required') && apartForm.get('terrace')?.value" class="text-danger">
+      Surface Terrace est obligatoire si Terrace est coché.
+    </div>
+    <div class="form-group">
+      <label for="surfaceTerrace">Surface Terrace:</label>
+      <input type="text" class="form-control" formControlName="surfaceTerrace">
+    </div>
+  
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select class="form-control" formControlName="category">
+        <option value="" disabled selected>Choisir une catégorie</option>
+        <option value="s+a">S+A</option>
+        <option value="s+2">S+2</option>
+        <option value="s+3">S+3</option>
+      </select>
+      <div *ngIf="apartForm.get('category')?.hasError('required')" class="text-danger">
+        La catégorie est obligatoire.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="residence">Résidence:</label>
+      <input type="text" class="form-control" formControlName="residence">
+      <div *ngIf="apartForm.get('residence')?.hasError('required')" class="text-danger">
+        La résidence est obligatoire.
+      </div>
+    </div>
+  
+    <button [disabled]="apartForm.invalid" class="btn btn-primary">Add</button>
+  </form>
+  

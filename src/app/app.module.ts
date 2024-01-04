@@ -7,7 +7,7 @@ import { TestComponent } from '../test/test.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ResidenceComponent } from './residence/residence.component';
-import { AppartementComponent } from './appartement/appartement.component';
+import { AppartmentsComponent } from './appartement/appartement.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { DetailsApartmentComponent } from './details-apartment/details-apartment.component';
@@ -16,6 +16,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DetailProductComponent } from './details-product/details-product.component';
 import { navbar } from './navbar/navbar.component';
 import { FormAppartementComponent } from './form-appartement/form-appartement.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
 
 
 @NgModule({
@@ -24,14 +28,18 @@ import { FormAppartementComponent } from './form-appartement/form-appartement.co
     TestComponent,
     ProductComponent,
     ResidenceComponent,
-    AppartementComponent,
+    AppartmentsComponent,
     NotFoundComponent,
     DetailsApartmentComponent,
     FormResidenceComponent,
     ReactiveFormComponent,
     DetailProductComponent,
     navbar,
-    FormAppartementComponent
+    FormAppartementComponent,
+    TvComponent,
+    MobileComponent,
+    AddProductComponent,
+    ShowOneProductComponent,
   ],
   imports: [
     BrowserModule,

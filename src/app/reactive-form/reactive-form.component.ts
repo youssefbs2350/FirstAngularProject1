@@ -17,10 +17,10 @@ export class ReactiveFormComponent {
   }
   ngOnInit() {
     this.registreForm = new FormGroup({
-      cin: new FormControl('', [Validators.pattern('^[0-9]{8}$')]),
-      firstname: new FormControl('', [Validators.required,Validators.minLength(3)]),
-      lastname: new FormControl('', Validators.required),
-      adress: new FormControl('', Validators.required),
+      cin: new FormControl('',Validators.pattern('^[0-9][8]$')),
+      ft: new FormControl('', [Validators.required,Validators.minLength(3)]),
+      ln: new FormControl('', Validators.required),
+      ad: new FormControl('', Validators.required),
     });
   }
 
